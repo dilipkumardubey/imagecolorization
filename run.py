@@ -48,7 +48,7 @@ def get_image():
             result_image_string = base64.b64encode(image_file.read()).decode('utf-8')        
         return jsonify({'msg' : 'success', 'img_data' : result_image_string})
 
-    return ""
+    return jsonify({'msg' : 'fail', 'img_data' : '0'})
 
 def get_colorized_image(original_img, marked_img):
     """Returns colorize image"""
