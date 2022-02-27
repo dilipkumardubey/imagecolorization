@@ -214,5 +214,4 @@ def yiq_to_rgb(y, i, q):                                                        
     return (r, g, b)
 
 if __name__ == "__main__":
-    app.debug = True
-    app.run()
+    app.run(debug = True)
