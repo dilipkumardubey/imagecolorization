@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, send_file, jsonify
+from flask import Flask, render_template, request, send_file, jsonify, make_response
 
 
 import numpy as np
@@ -45,10 +45,13 @@ def get_image():
 
     if ret:
         with open("./media/result.bmp", "rb") as image_file:
-            result_image_string = base64.b64encode(image_file.read()).decode('utf-8')        
-        return jsonify({'msg' : 'success', 'img_data' : result_image_string})
-
-    return jsonify({'msg' : 'fail', 'img_data' : '0'})
+            image_binary = image_file.read()
+        response = make_response(base64.b64encode(image_binary))
+        response.headers.set('Content-Type', 'image/bmp')
+        response.headers.set('Content-Disposition', 'attachment', filename='result_image.bmp')
+        return response
+            
+    return ""
 
 def get_colorized_image(original_img, marked_img):
     """Returns colorize image"""
