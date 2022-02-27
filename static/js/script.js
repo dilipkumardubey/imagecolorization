@@ -1,5 +1,3 @@
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
-
 document.getElementById("clear_button").disabled = true;
 document.getElementById("colorize_button").disabled = true;
 document.getElementById("download_button").disabled = true;
