@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Colorization_using_Optimization</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
+</head>
+<body>
+	<div id='title'>
+		<h1 style="color: blue; font-size: 40px; text-align: center;">Image Colorization using Optimization</h1>
+	</div>
+
+	<img id="uploaded_image" width="200" hidden>
+
+	<div class="row">
+		<div class="column">
+
+			<h2 style="color:green; font-size:20px;text-align: left;">Input Grayscale Image</h2>	
+			<label for="input_image_upload">Upload input image</label>
+			<input type="file" accept="image/*" id="imageInput">
+			<br><br>
+			<canvas id="input_image_canvas" width="640" height="420" style="border: 0px solid #D3D3D3;"></canvas>
+		</div>
+
+		<div class="column">
+			<br>
+			<label for="favcolor">Select color:</label><br>
+			<input type="color" name="favcolor" id="favcolor">
+
+			<br><br><br><br>
+			<button id="clear_button" onclick="clear_canvas();">Clear All</button>
+
+			<br><br><br><br>
+			<button id="colorize_button" onclick="colorize_image();">Colorize</button>	
+
+			<br><br><br><br>
+			<button id="download_button" onclick="download_image();">Download</button>	
+		</div>
+
+		<div class="column">
+			<h2 style="color: green;font-size: 20px;text-align: left;">Output Color Image</h2>
+			<br><br><br>
+			<canvas id="output_image_canvas" width="640" height="420" style="border:0x solid #D3D3D3;"></canvas>
+			
+		</div>
+
+		
+		<div class="column">	
+		</div>
+	</div>
+
+	<script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
+	
+</body>
+</html>
