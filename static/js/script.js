@@ -65,7 +65,6 @@ function colorize_image() {
 
 	var imageDataURL = output_canvas.toDataURL(); // Convert canvas image data to DataURL
 	$.ajax({
-		console.log('Here we send request');
 		type: "POST",
 		url: "/hook",
 		data: {
@@ -84,6 +83,7 @@ function colorize_image() {
 		},
 		error:function(error){
 			console.log(error);
+					
 		}
 	});
 }
