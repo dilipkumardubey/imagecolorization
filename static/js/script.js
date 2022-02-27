@@ -77,7 +77,7 @@ function colorize_image() {
 			resultImage.onload = function() {
 			  output_ctx.drawImage(resultImage, 0, 0);
 			};
-			resultImage.src="data:image/bmp;base64,"+ response['img_data'];
+			resultImage.src = 'data:image/bmp;base64,' + response;
 			document.getElementById("download_button").disabled = false;
 			clear_canvas();
 		},
