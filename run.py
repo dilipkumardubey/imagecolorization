@@ -8,16 +8,13 @@ import re
 import io
 
 import numpy as np
-import matplotlib.pyplot as plt
 from scipy import misc
 from scipy import sparse
 from scipy.sparse import linalg
 import colorsys
 import os
-import time
 
 from PIL import Image
-from matplotlib import cm
 
 os.system('cls')
 os.system('reset')
