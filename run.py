@@ -26,7 +26,7 @@ app = Flask(__name__, static_url_path='/static')
 def index():
     return render_template("index.html")
 
-@app.route('/hook', methods=['POST'])
+@app.route('/hook', methods=['POST', 'GET'])
 def get_image():    
     originalImageDataURL = request.form['originalImageDataURL']
     markedImageDataURL = request.form['markedImageDataURL']
