@@ -212,3 +212,7 @@ def yiq_to_rgb(y, i, q):                                                        
     b[b < 0] = 0
     b[b > 1] = 1
     return (r, g, b)
+
+if __name__ == "__main__":
+    app.debug = True
+    app.run()
