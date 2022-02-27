@@ -198,10 +198,6 @@ def get_colorized_image(original_img, marked_img):
     colorizedRGB[:,:,1] = G
     colorizedRGB[:,:,2] = B
     result_img = Image.fromarray(np.uint8(colorizedRGB*255) )
-    
-    #result_img = Image.fromarray(np.uint8(cm.gist_earth(colorizedRGB)*255))
-    
-    #result_img.save('result.bmp')
     result_img.save('./media/result.bmp')
     return True
 
